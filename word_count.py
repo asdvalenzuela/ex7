@@ -43,10 +43,17 @@ def sort_freq(argv):
             dict_sort[value].append(key)
 
     values_list = dict_sort.values()
-    for list_ in values_list:
-        for value in item:
+    for lists in values_list:
+        lists.sort()
+        for word in lists:
+            x = lists.index(word)
+            del lists[x]
 
-    print dict_sort
+
+    print values_list
+
+
+    #print dict_sort
 
     #for new_word, frequency in sorted(word_dict.items(), key = lambda word: word[1]):
        # print word, frequency
